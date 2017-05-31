@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center">
+
+    <Button
+        android:id="@+id/btnAuthentication"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/authentication"/>
+
+    <Button
+        android:id="@+id/btnRealTimeDatabase"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/real_time_database"/>
+
+    <Button
+        android:id="@+id/btnCloudMessaging"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/cloud_messaging"/>
+
+    <Button
+        android:id="@+id/btnGoogleAnalytics"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/google_analytics"/>
+
+    <Button
+        android:id="@+id/btnCrashReporting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/crash_reporting"/>
+
+
+</LinearLayout>

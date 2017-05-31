@@ -1,0 +1,14 @@
+<resources>
+
+    <string name="app_name">Firebase Demo</string>
+    
+    
+    <string name="authentication">Authentication</string>
+    <string name="real_time_database">Realtime Database</string>
+    <string name="cloud_messaging">Cloud Messaging</string>
+    <string name="crash_reporting">Crash Reporting</string>
+    <string name="google_analytics">Google Analytics</string>
+
+
+
+</resources>
