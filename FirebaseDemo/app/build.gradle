@@ -22,6 +22,7 @@ android {
 dependencies {
 
     final SUPPORT_LIBRARY_VERSION = '25.3.1'
+    final PLAY_SERVICE_VERSION = '10.2.6'
 
     compile fileTree(dir: 'libs', include: ['*.jar'])
 
@@ -32,12 +33,12 @@ dependencies {
     compile 'com.squareup.okhttp3:okhttp:3.8.0'
 
 
-    compile 'com.google.firebase:firebase-core:10.2.6'
-    compile 'com.google.firebase:firebase-database:10.2.6'
-    compile 'com.google.firebase:firebase-crash:10.2.6'
-    compile 'com.google.firebase:firebase-auth:10.2.6'
-    compile 'com.google.firebase:firebase-messaging:10.2.6'
-
+    compile "com.google.firebase:firebase-core:$PLAY_SERVICE_VERSION"
+    compile "com.google.firebase:firebase-database:$PLAY_SERVICE_VERSION"
+    compile "com.google.firebase:firebase-crash:$PLAY_SERVICE_VERSION"
+    compile "com.google.firebase:firebase-messaging:$PLAY_SERVICE_VERSION"
+    compile "com.google.firebase:firebase-auth:$PLAY_SERVICE_VERSION"
+    compile "com.google.android.gms:play-services-auth:$PLAY_SERVICE_VERSION"
 
 }
 apply plugin: 'com.google.gms.google-services'
