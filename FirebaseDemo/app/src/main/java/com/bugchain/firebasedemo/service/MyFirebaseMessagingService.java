@@ -14,9 +14,10 @@ import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.media.RingtoneManager;
 import android.support.v4.app.NotificationCompat;
+import android.util.Log;
 
-import com.bugchain.firebasedemo.MainActivity;
 import com.bugchain.firebasedemo.R;
+import com.bugchain.firebasedemo.activity.MainActivity;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 
@@ -26,6 +27,8 @@ import java.util.Map;
 
 public class MyFirebaseMessagingService extends FirebaseMessagingService{
 
+    private static final String TAG = MyFirebaseMessagingService.class.getSimpleName();
+
     @Override
     public void onMessageReceived(RemoteMessage remoteMessage) {
         super.onMessageReceived(remoteMessage);
@@ -34,6 +37,17 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService{
         // If the application is in the foreground handle both data and notification messages here.
         // Also if you intend on generating your own notifications as a result of a received FCM
         // message, here is where that should be initiated. See sendNotification method below.
+
+        // Check if message contains a data payload.
+        if (remoteMessage.getData().size() > 0) {
+            Log.w(TAG, "Message data payload: " + remoteMessage.getData());
+        }
+
+        // Check if message contains a notification payload.
+        if (remoteMessage.getNotification() != null) {
+            Log.w(TAG, "Message Notification Body: " + remoteMessage.getNotification().getBody());
+        }
+
         RemoteMessage.Notification notification = remoteMessage.getNotification();
         Map<String, String> data = remoteMessage.getData();
 

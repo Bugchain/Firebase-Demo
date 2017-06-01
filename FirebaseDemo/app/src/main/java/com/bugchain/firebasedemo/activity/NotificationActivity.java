@@ -1,7 +1,8 @@
-package com.bugchain.firebasedemo;
+package com.bugchain.firebasedemo.activity;
 /*
- * Created by BugChain on 5/31/17.
- * chain.chaiyaphat@gmail.com
+ * Created by BUG CHAIN on 01/06/2017.
+ * ARIP Public Company Limited
+ * Bangkok, Thailand
  */
 
 import android.os.Bundle;
@@ -10,28 +11,21 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Toast;
 
+import com.bugchain.firebasedemo.R;
 import com.google.firebase.messaging.FirebaseMessaging;
 
-public class MAnalyticsActivity extends AppCompatActivity implements View.OnClickListener{
+public class NotificationActivity extends AppCompatActivity implements View.OnClickListener{
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_analytics);
+        setContentView(R.layout.activity_notification);
 
         findViewById(R.id.btnSubScribeNews).setOnClickListener(this);
         findViewById(R.id.btnUnSubScribeNews).setOnClickListener(this);
 
     }
 
-    private void subScribeNews(){
-        FirebaseMessaging.getInstance().subscribeToTopic("news");
-        Toast.makeText(this,"SubScribe news",Toast.LENGTH_SHORT).show();
-    }
-    private void unSubScribeNews(){
-        FirebaseMessaging.getInstance().unsubscribeFromTopic("news");
-        Toast.makeText(this,"UnSubScribe news",Toast.LENGTH_SHORT).show();
-    }
 
     @Override
     public void onClick(View v) {
@@ -44,4 +38,14 @@ public class MAnalyticsActivity extends AppCompatActivity implements View.OnClic
                 break;
         }
     }
+
+    private void subScribeNews(){
+        FirebaseMessaging.getInstance().subscribeToTopic("news");
+        Toast.makeText(this,"SubScribe news",Toast.LENGTH_SHORT).show();
+    }
+    private void unSubScribeNews(){
+        FirebaseMessaging.getInstance().unsubscribeFromTopic("news");
+        Toast.makeText(this,"UnSubScribe news",Toast.LENGTH_SHORT).show();
+    }
+
 }

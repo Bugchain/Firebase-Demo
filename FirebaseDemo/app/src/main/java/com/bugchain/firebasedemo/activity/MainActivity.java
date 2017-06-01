@@ -1,9 +1,11 @@
-package com.bugchain.firebasedemo;
+package com.bugchain.firebasedemo.activity;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+
+import com.bugchain.firebasedemo.R;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -25,7 +27,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.btnGoogleAnalytics:
-                    startActivity(new Intent(MainActivity.this, MAnalyticsActivity.class));
+                    startActivity(new Intent(MainActivity.this, AnalyticsActivity.class));
+                break;
+            case R.id.btnCloudMessaging:
+                    startActivity(new Intent(MainActivity.this, NotificationActivity.class));
                 break;
         }
     }
