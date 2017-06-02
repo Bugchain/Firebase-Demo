@@ -1,4 +1,4 @@
-package com.bugchain.firebasedemo.activity;
+package com.bugchain.firebasedemo.activity.auth;
 /*
  * Created by BUG CHAIN on 01/06/2017.
  * ARIP Public Company Limited

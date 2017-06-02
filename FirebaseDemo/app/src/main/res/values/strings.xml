@@ -8,7 +8,9 @@
     <string name="cloud_messaging">Cloud Messaging</string>
     <string name="crash_reporting">Crash Reporting</string>
     <string name="google_analytics">Google Analytics</string>
-
+    <string name="logout">Logout</string>
+    <string name="forgot_password">Forgot password</string>
+    <string name="profile">Profile</string>
 
 
 </resources>
